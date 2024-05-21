@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Brother</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #666;
-            font-size: 18px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry, Bilkis</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffeded;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: #ff5e5e;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: beat 1s infinite alternate;
+    margin-bottom: 30px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #ff5e5e;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    top: 0;
+  }
+  
+  .heart:before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+  }
+  
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 0;
+  }
+  
+  @keyframes beat {
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  .message {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 80%;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, brother! Nice to meet you</h1>
-        <p>This is a simple one-page project.</p>
-    </div>
+  <div class="container">
+    <h1>Sorry, Bilkis</h1>
+    <div class="heart"></div>
+    <p class="message">Meri jaan Bilkis,<br>I am really sorry baby. Ha mai time nahi de para hu i know but meri jaan mere demang har wat tum hi ho mera baccha<br>I love you soo much meri jaan</p>
+  </div>
 </body>
 </html>
